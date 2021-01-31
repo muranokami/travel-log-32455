@@ -10,23 +10,26 @@
       </ul>
     </div>
   <% end %>
+  <%= form.hidden_field :account_id %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :nickname %>
-    <%= form.text_area :nickname %>
+    <%= form.text_area :nickname, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :account_id %>
+    <div class="border p-1">
+      <%= @board_user.account_id %></div>
     <%= form.number_field :account_id %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :memo %>
-    <%= form.text_area :memo %>
+    <%= form.text_area :memo, class: 'form-control' %>
   </div>
 
-  <div class="actions">
+  <div>
     <%= form.submit %>
   </div>
 <% end %>
